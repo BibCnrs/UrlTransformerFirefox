@@ -11,9 +11,10 @@
   "icons": {
     "48": "icons/bibcnrs-48.png"
   },
-  "browser_action": {
+  "page_action": {
     "default_icon": "icons/bibcnrs-48.png",
-    "default_title": "__MSG_action_title__"
+    "default_title": "__MSG_action_title__",
+    "show_matches": ["<all_urls>"]
   },
   "permissions": [
     "activeTab",

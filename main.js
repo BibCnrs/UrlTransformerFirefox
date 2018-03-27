@@ -1,16 +1,24 @@
 'use strict';
 
 async function handleClick () {
-    const [currentTab] = await browser.tabs.query({ active: true }) ;
+    const [currentTab] = await browser.tabs.query({ active: true });
     const { domain } = await browser.storage.sync.get('domain');
     browser.tabs.update(null, {
         url: `http://${domain}.bib.cnrs.fr/login?url=${currentTab.url}`,
     });
 }
 
-browser.browserAction.onClicked.addListener(handleClick);
+browser.pageAction.onClicked.addListener(handleClick);
 
 var checkedState = true;
+
+browser.menus.create({
+    id: 'select',
+    title: browser.i18n.getMessage('choose-domain'),
+    type: 'radio',
+    contexts: ['page_action']
+});
+
 const domains = [
     'insb',
     'inshs',
@@ -24,20 +32,13 @@ const domains = [
     'ins2i',
 ];
 
-browser.menus.create({
-    id: 'select',
-    title: browser.i18n.getMessage('choose-domain'),
-    type: 'radio',
-    contexts: ['browser_action']
-});
-
 domains.forEach(name => {
     browser.menus.create({
         id: name,
         parentId: 'select',
         type: 'radio',
         title: name,
-        contexts: ['browser_action']
+        contexts: ['page_action']
     });
 });
 
