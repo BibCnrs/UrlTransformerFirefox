@@ -26,7 +26,7 @@ const domains = [
 
 browser.menus.create({
     id: 'select',
-    title: 'select your domain',
+    title: browser.i18n.getMessage('choose-domain'),
     type: 'radio',
     contexts: ['browser_action']
 });

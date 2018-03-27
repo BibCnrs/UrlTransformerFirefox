@@ -1,0 +1,18 @@
+{
+    "extensionName": {
+        "message": "BibCnrs Url Transformer",
+        "description": "Name of the extension."
+    },
+    "description": {
+        "message": "Allow to authenticate on editor site using your bibcnrs account",
+        "description": "Description of the extension"
+    },
+    "action_title": {
+        "message": "Authentify with bibcnrs",
+        "description": "Tooltip on the action button"
+    },
+    "choose-domain": {
+        "message": "Choose your domain",
+        "description": "Setting label"
+    }
+}

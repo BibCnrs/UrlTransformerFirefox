@@ -1,0 +1,18 @@
+{
+    "extensionName": {
+        "message": "BibCnrs Transformeur d'url",
+        "description": "Name of the extension."
+    },
+    "description": {
+        "message": "Permet de s'authentifier sur le site d'un éditeur en utilisant son compte BibCnrs",
+        "description": "Description de l'extension"
+    },
+    "action_title": {
+        "message": "S'authentifier avec bibcnrs",
+        "description": "Tooltip du bouton action"
+    },
+    "choose-domain": {
+        "message": "Choisissez votre domaine",
+        "description": "Setting label"
+    }
+}
