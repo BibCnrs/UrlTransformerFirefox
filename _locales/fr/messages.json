@@ -22,5 +22,9 @@
     "no-domain-message": {
         "message": "VOus devez d'abord choisir un domain (Clic droit sur le bouton)",
         "description": "Message de la notification pas de domaine"
+    },
+    "open-link": {
+        "message": "Ouvrir le lien en passant par l'authentification BibCnrs",
+        "description": "message du menu lien"
     }
 }

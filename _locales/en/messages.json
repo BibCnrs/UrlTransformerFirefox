@@ -22,5 +22,9 @@
     "no-domain-message": {
         "message": "You must first choose a domain in the setting (right click on the button)",
         "description": "No domain error notification message"
+    },
+    "open-link": {
+        "message": "Open link with bibcnrs authentification",
+        "description": "link menu message"
     }
 }

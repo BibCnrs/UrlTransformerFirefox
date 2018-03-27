@@ -1,7 +1,6 @@
 'use strict';
 
-async function handleClick () {
-    const [currentTab] = await browser.tabs.query({ active: true });
+async function proxifyUrl(url) {
     const { domain } = await browser.storage.sync.get('domain');
 
     if(!domain) {
@@ -14,13 +13,22 @@ async function handleClick () {
         return;
     }
     browser.tabs.update(null, {
-        url: `http://${domain}.bib.cnrs.fr/login?url=${currentTab.url}`,
+        url: `http://${domain}.bib.cnrs.fr/login?url=${url}`,
     });
+
+}
+
+async function handleClick (tab) {
+    await proxifyUrl(tab.url);
 }
 
 browser.pageAction.onClicked.addListener(handleClick);
 
-var checkedState = true;
+browser.menus.create({
+    id: 'open-link',
+    title: browser.i18n.getMessage('open-link'),
+    contexts: ['link']
+});
 
 browser.menus.create({
     id: 'select',
@@ -59,9 +67,14 @@ browser.storage.sync.get('domain').then(({ domain }) => {
     browser.menus.update(domain, { checked: true });
 });
 
-browser.menus.onClicked.addListener((info, tab, checked, wasChecked) => {
+browser.menus.onClicked.addListener((info) => {
     const name = info.menuItemId;
     if (name === 'selected') {
+        return;
+    }
+
+    if (name === 'open-link') {
+        proxifyUrl(info.linkUrl);
         return;
     }
     browser.storage.sync.set({ domain: name });
