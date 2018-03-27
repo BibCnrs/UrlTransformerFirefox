@@ -2,8 +2,9 @@
 
 async function handleClick () {
     const [currentTab] = await browser.tabs.query({ active: true }) ;
+    const { domain } = await browser.storage.sync.get('domain');
     browser.tabs.update(null, {
-        url: `http://insb.bib.cnrs.fr/login?url=${currentTab.url}`,
+        url: `http://${domain}.bib.cnrs.fr/login?url=${currentTab.url}`,
     });
 }
 

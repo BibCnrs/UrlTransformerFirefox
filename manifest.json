@@ -6,6 +6,12 @@
 
   "description": "Allow to authenticate on editor site using your bibcnrs account",
 
+  "applications": {
+    "gecko": {
+      "id": "urlTransformer@bibcnrs.com"
+    }
+  },
+
   "icons": {
     "48": "icons/bibcnrs-48.png"
   },
@@ -14,8 +20,14 @@
     "default_title": "Authentify with bibcnrs"
   },
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
+
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true
+  },
 
   "background": {
     "scripts": ["main.js"]
