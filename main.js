@@ -3,6 +3,16 @@
 async function handleClick () {
     const [currentTab] = await browser.tabs.query({ active: true });
     const { domain } = await browser.storage.sync.get('domain');
+
+    if(!domain) {
+        browser.notifications.create({
+            type: "basic",
+            iconUrl: browser.extension.getURL("icons/bibcnrs-48.png"),
+            title: browser.i18n.getMessage('no-domain-title'),
+            message: browser.i18n.getMessage('no-domain-message')
+        });
+        return;
+    }
     browser.tabs.update(null, {
         url: `http://${domain}.bib.cnrs.fr/login?url=${currentTab.url}`,
     });

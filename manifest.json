@@ -19,7 +19,8 @@
   "permissions": [
     "activeTab",
     "storage",
-    "menus"
+    "menus",
+    "notifications"
   ],
   "options_ui": {
     "page": "options.html",

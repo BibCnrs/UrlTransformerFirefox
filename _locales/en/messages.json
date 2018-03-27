@@ -14,5 +14,13 @@
     "choose-domain": {
         "message": "Choose your domain",
         "description": "Setting label"
+    },
+    "no-domain-title": {
+        "message": "No domain",
+        "description": "No domain error notification title"
+    },
+    "no-domain-message": {
+        "message": "You must first choose a domain in the setting (right click on the button)",
+        "description": "No domain error notification message"
     }
 }
