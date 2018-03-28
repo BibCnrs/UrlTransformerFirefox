@@ -1,0 +1,22 @@
+{
+  "name": "urltransformerfirefox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BibCnrs/UrlTransformerFirefox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BibCnrs/UrlTransformerFirefox/issues"
+  },
+  "homepage": "https://github.com/BibCnrs/UrlTransformerFirefox#readme",
+  "dependencies": {
+    "webextension-polyfill": "0.2.1"
+  }
+}
