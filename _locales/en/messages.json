@@ -1,0 +1,30 @@
+{
+    "extensionName": {
+        "message": "BibCnrs Url Transformer",
+        "description": "Name of the extension."
+    },
+    "description": {
+        "message": "Allow to authenticate on editor site using your bibcnrs account",
+        "description": "Description of the extension"
+    },
+    "action_title": {
+        "message": "Authentify with bibcnrs",
+        "description": "Tooltip on the action button"
+    },
+    "choose-domain": {
+        "message": "Choose your domain",
+        "description": "Setting label"
+    },
+    "no-domain-title": {
+        "message": "No domain",
+        "description": "No domain error notification title"
+    },
+    "no-domain-message": {
+        "message": "You must first choose a domain in the setting (right click on the button)",
+        "description": "No domain error notification message"
+    },
+    "open-link": {
+        "message": "Open link with bibcnrs authentification",
+        "description": "link menu message"
+    }
+}
