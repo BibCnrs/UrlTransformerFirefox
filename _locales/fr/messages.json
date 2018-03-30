@@ -20,7 +20,7 @@
         "description": "Titre de la notification pas de domaine"
     },
     "no_domain_message": {
-        "message": "VOus devez d'abord choisir un domain (Clic droit sur le bouton)",
+        "message": "Vous devez d'abord choisir un domaine (Clic droit sur le bouton)",
         "description": "Message de la notification pas de domaine"
     },
     "open_link": {
